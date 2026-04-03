@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私政策 · Privacy Policy — HealthLog</title>
+  <style>
+    :root {
+      --accent: #3B82F6;
+      --accent-light: #EFF6FF;
+      --text: #1F2937;
+      --text-secondary: #6B7280;
+      --border: #E5E7EB;
+      --bg: #FFFFFF;
+      --bg-section: #F9FAFB;
+      --radius: 10px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --accent: #60A5FA;
+        --accent-light: #1E3A5F;
+        --text: #F3F4F6;
+        --text-secondary: #9CA3AF;
+        --border: #374151;
+        --bg: #111827;
+        --bg-section: #1F2937;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    .container {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .app-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.3px;
+    }
+    .lang-toggle {
+      display: flex;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .lang-btn {
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-secondary);
+      transition: background 0.15s, color 0.15s;
+    }
+    .lang-btn.active {
+      background: var(--accent);
+      color: #fff;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      margin-bottom: 6px;
+    }
+    .effective-date {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+    .intro {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin-bottom: 36px;
+      font-size: 14px;
+      color: var(--text);
+    }
+    section {
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    p { margin-bottom: 10px; }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    li { margin-bottom: 6px; }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 14px;
+    }
+    .data-table th, .data-table td {
+      text-align: left;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+    }
+    .data-table th {
+      background: var(--bg-section);
+      font-weight: 600;
+    }
+    .data-table tr:last-child td { border-bottom: 1px solid var(--border); }
+    .badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .contact-block {
+      background: var(--bg-section);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+    }
+    .contact-block a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .contact-block a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+
+    /* Language visibility */
+    .zh, .en { display: none; }
+    body.lang-zh .zh { display: block; }
+    body.lang-en .en { display: block; }
+    body.lang-zh .zh-inline { display: inline; }
+    body.lang-en .en-inline { display: inline; }
+    .zh-inline, .en-inline { display: none; }
+  </style>
+</head>
+<body class="lang-zh">
+<div class="container">
+
+  <header>
+    <div class="app-name">HealthLog · 健康手账</div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('zh')" id="btn-zh">中文</button>
+      <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button>
+    </div>
+  </header>
+
+  <!-- ── CHINESE ── -->
+  <div class="zh">
+    <h1>隐私政策</h1>
+    <p class="effective-date">生效日期：2026年4月3日</p>
+
+    <div class="intro">
+      HealthLog（健康手账）尊重并保护您的隐私。本政策说明我们如何收集、使用和保护您的数据。<strong>核心原则：您的健康数据始终存储在您自己的设备或 iCloud 账户中，我们的服务器不会收集或存储任何个人健康数据。</strong>
+    </div>
+
+    <section>
+      <h2>1. 我们收集哪些数据</h2>
+      <table class="data-table">
+        <tr><th>数据类型</th><th>存储位置</th><th>用途</th></tr>
+        <tr><td>血压、心率、体重记录</td><td>本机 / iCloud（可选）</td><td>核心功能：记录与分析</td></tr>
+        <tr><td>备注与标签</td><td>本机 / iCloud（可选）</td><td>丰富记录内容</td></tr>
+        <tr><td>用户档案信息（姓名、身高、目标值）</td><td>本机 UserDefaults</td><td>个性化展示与计算</td></tr>
+        <tr><td>健康目标与提醒设置</td><td>本机</td><td>目标追踪与通知</td></tr>
+        <tr><td>购买凭证（Pro）</td><td>本机 UserDefaults + StoreKit</td><td>验证 Pro 功能解锁状态</td></tr>
+      </table>
+      <p>我们<strong>不收集</strong>以下数据：位置、通讯录、相机、广告标识符（IDFA）、崩溃日志（无第三方 SDK）。</p>
+    </section>
+
+    <section>
+      <h2>2. Apple HealthKit</h2>
+      <p>经您授权后，App 可从「健康」App 读取血压和体重数据以便导入。我们仅读取您明确授权的健康数据类型，且：</p>
+      <ul>
+        <li>HealthKit 数据不会上传至任何服务器；</li>
+        <li>HealthKit 数据不会用于广告或营销；</li>
+        <li>您可随时在 iPhone「设置 → 健康 → 数据访问与设备」中撤销授权。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. iCloud 同步</h2>
+      <p>iCloud 同步为<strong>可选功能</strong>，默认关闭。开启后，您的数据通过 Apple CloudKit 在您本人的 iCloud 账户中加密同步，我们无法访问该数据。关闭 iCloud 同步不影响本地数据。</p>
+    </section>
+
+    <section>
+      <h2>4. 数据共享与第三方</h2>
+      <p>我们<strong>不会</strong>将您的任何数据出售、出租或共享给第三方。App 内不含任何第三方广告 SDK、分析 SDK 或追踪库。</p>
+      <p>我们使用 Apple 提供的以下系统服务（均受 Apple 隐私政策约束）：</p>
+      <ul>
+        <li>iCloud / CloudKit — 数据同步（可选）</li>
+        <li>StoreKit — 处理 Pro 内购</li>
+        <li>UserNotifications — 本地提醒通知</li>
+        <li>HealthKit — 健康数据读取（可选）</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. 数据安全</h2>
+      <p>所有本地数据存储在受 iOS 沙盒保护的 SwiftData 数据库中。iCloud 同步数据由 Apple 在传输和静态时加密。我们无法访问您设备上的任何数据，也没有后端服务器存储用户数据。</p>
+    </section>
+
+    <section>
+      <h2>6. 您的数据权利</h2>
+      <ul>
+        <li><strong>导出：</strong>您可随时通过「设置 → 导出 CSV」导出全部数据，数据完全归您所有；</li>
+        <li><strong>删除：</strong>删除 App 将清除设备上的全部本地数据；如开启了 iCloud 同步，请同时在「iCloud 设置」中删除对应 App 数据；</li>
+        <li><strong>更正：</strong>您可在 App 内随时编辑或删除任意记录。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. 儿童隐私</h2>
+      <p>本 App 不面向 13 岁以下儿童，我们不会有意收集儿童的个人信息。</p>
+    </section>
+
+    <section>
+      <h2>8. 本政策的变更</h2>
+      <p>若本隐私政策有重大变更，我们将在 App 内发布通知并更新本页面顶部的生效日期。继续使用 App 即表示您接受更新后的政策。</p>
+    </section>
+
+    <section>
+      <h2>9. 联系我们</h2>
+      <div class="contact-block">
+        <p>如有任何隐私相关问题，请通过以下方式联系我们：</p>
+        <p style="margin-top:10px;">
+          邮箱：<a href="mailto:support@healthlog.app">support@healthlog.app</a>
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ── ENGLISH ── -->
+  <div class="en">
+    <h1>Privacy Policy</h1>
+    <p class="effective-date">Effective Date: April 3, 2026</p>
+
+    <div class="intro">
+      HealthLog respects and protects your privacy. This policy explains how we handle your data. <strong>Core principle: your health data is stored only on your own device or iCloud account — our servers never collect or store any personal health data.</strong>
+    </div>
+
+    <section>
+      <h2>1. Data We Collect</h2>
+      <table class="data-table">
+        <tr><th>Data Type</th><th>Storage Location</th><th>Purpose</th></tr>
+        <tr><td>Blood pressure, heart rate, weight records</td><td>On-device / iCloud (optional)</td><td>Core feature: logging and analysis</td></tr>
+        <tr><td>Notes and tags</td><td>On-device / iCloud (optional)</td><td>Enrich records</td></tr>
+        <tr><td>Profile info (name, height, targets)</td><td>On-device UserDefaults</td><td>Personalized display and calculation</td></tr>
+        <tr><td>Health goals and reminder settings</td><td>On-device</td><td>Goal tracking and notifications</td></tr>
+        <tr><td>Purchase receipt (Pro)</td><td>On-device UserDefaults + StoreKit</td><td>Verify Pro unlock status</td></tr>
+      </table>
+      <p>We do <strong>not</strong> collect: location, contacts, camera, advertising identifiers (IDFA), or crash logs (no third-party SDKs).</p>
+    </section>
+
+    <section>
+      <h2>2. Apple HealthKit</h2>
+      <p>With your permission, the app can read blood pressure and weight data from the Health app for import. We only read the health data types you explicitly authorize, and:</p>
+      <ul>
+        <li>HealthKit data is never uploaded to any server;</li>
+        <li>HealthKit data is never used for advertising or marketing;</li>
+        <li>You can revoke access at any time in iPhone Settings → Health → Data Access &amp; Devices.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. iCloud Sync</h2>
+      <p>iCloud sync is an <strong>optional feature</strong>, disabled by default. When enabled, your data is encrypted and synced within your own iCloud account via Apple CloudKit — we have no access to this data. Disabling iCloud sync does not affect local data.</p>
+    </section>
+
+    <section>
+      <h2>4. Data Sharing &amp; Third Parties</h2>
+      <p>We do <strong>not</strong> sell, rent, or share any of your data with third parties. The app contains no third-party advertising SDKs, analytics SDKs, or tracking libraries.</p>
+      <p>We use the following Apple system services (each governed by Apple's Privacy Policy):</p>
+      <ul>
+        <li>iCloud / CloudKit — data sync (optional)</li>
+        <li>StoreKit — processing Pro in-app purchase</li>
+        <li>UserNotifications — local reminder notifications</li>
+        <li>HealthKit — health data read access (optional)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Data Security</h2>
+      <p>All local data is stored in a SwiftData database protected by the iOS app sandbox. iCloud-synced data is encrypted by Apple in transit and at rest. We have no access to data on your device and operate no backend server that stores user data.</p>
+    </section>
+
+    <section>
+      <h2>6. Your Rights</h2>
+      <ul>
+        <li><strong>Export:</strong> You can export all data at any time via Settings → Export CSV. Your data belongs to you;</li>
+        <li><strong>Delete:</strong> Deleting the app removes all local data from your device. If iCloud sync was enabled, also delete the app data from iCloud Settings;</li>
+        <li><strong>Correct:</strong> You can edit or delete any record inside the app at any time.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. Children's Privacy</h2>
+      <p>This app is not directed at children under 13, and we do not knowingly collect personal information from children.</p>
+    </section>
+
+    <section>
+      <h2>8. Changes to This Policy</h2>
+      <p>If we make material changes to this Privacy Policy, we will post a notice in the app and update the effective date at the top of this page. Continued use of the app constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section>
+      <h2>9. Contact Us</h2>
+      <div class="contact-block">
+        <p>For any privacy-related questions, please contact us:</p>
+        <p style="margin-top:10px;">
+          Email: <a href="mailto:support@healthlog.app">support@healthlog.app</a>
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <span class="zh-inline">© 2026 HealthLog · 健康手账 · 保留所有权利</span>
+    <span class="en-inline">© 2026 HealthLog · All rights reserved</span>
+  </footer>
+
+</div>
+
+<script>
+  function setLang(lang) {
+    document.body.className = 'lang-' + lang;
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+    document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  }
+  // Auto-detect browser language
+  const browserLang = navigator.language || navigator.userLanguage || 'zh';
+  if (!browserLang.startsWith('zh')) setLang('en');
+</script>
+</body>
+</html>
