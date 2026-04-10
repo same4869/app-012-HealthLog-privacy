@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私政策 · Privacy Policy — 健康手账</title>
+  <style>
+    :root {
+      --accent: #3B82F6;
+      --accent-light: #EFF6FF;
+      --text: #1F2937;
+      --text-secondary: #6B7280;
+      --border: #E5E7EB;
+      --bg: #FFFFFF;
+      --bg-section: #F9FAFB;
+      --radius: 10px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --accent: #60A5FA;
+        --accent-light: #1E3A5F;
+        --text: #F3F4F6;
+        --text-secondary: #9CA3AF;
+        --border: #374151;
+        --bg: #111827;
+        --bg-section: #1F2937;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "HarmonyOS Sans", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    .container {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .app-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.3px;
+    }
+    .lang-toggle {
+      display: flex;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .lang-btn {
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-secondary);
+      transition: background 0.15s, color 0.15s;
+    }
+    .lang-btn.active {
+      background: var(--accent);
+      color: #fff;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      margin-bottom: 6px;
+    }
+    .effective-date {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+    .intro {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin-bottom: 36px;
+      font-size: 14px;
+      color: var(--text);
+    }
+    section {
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    p { margin-bottom: 10px; }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    li { margin-bottom: 6px; }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 14px;
+    }
+    .data-table th, .data-table td {
+      text-align: left;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+    }
+    .data-table th {
+      background: var(--bg-section);
+      font-weight: 600;
+    }
+    .data-table tr:last-child td { border-bottom: 1px solid var(--border); }
+    .contact-block {
+      background: var(--bg-section);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+    }
+    .contact-block a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .contact-block a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+
+    /* Language visibility */
+    .zh, .en { display: none; }
+    body.lang-zh .zh { display: block; }
+    body.lang-en .en { display: block; }
+    body.lang-zh .zh-inline { display: inline; }
+    body.lang-en .en-inline { display: inline; }
+    .zh-inline, .en-inline { display: none; }
+  </style>
+</head>
+<body class="lang-zh">
+<div class="container">
+
+  <header>
+    <div class="app-name">健康手账 · HarmonyOS</div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('zh')" id="btn-zh">中文</button>
+      <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button>
+    </div>
+  </header>
+
+  <!-- ── CHINESE ── -->
+  <div class="zh">
+    <h1>隐私政策</h1>
+    <p class="effective-date">生效日期：2026年4月10日</p>
+
+    <div class="intro">
+      健康手账尊重并保护您的隐私。<strong>核心原则：您的所有健康数据均仅保存在您自己的设备本地，应用不设任何服务器，不向任何第三方传输数据。</strong>
+    </div>
+
+    <section>
+      <h2>1. 我们收集与存储哪些数据</h2>
+      <table class="data-table">
+        <tr><th>数据类型</th><th>存储位置</th><th>用途</th></tr>
+        <tr><td>血压、心率、体重记录</td><td>设备本地（PersistenceV2）</td><td>核心功能：记录与趋势分析</td></tr>
+        <tr><td>备注与状态标签</td><td>设备本地</td><td>丰富记录内容</td></tr>
+        <tr><td>成员档案（姓名、身高、目标值）</td><td>设备本地</td><td>个性化展示与健康目标计算</td></tr>
+        <tr><td>提醒设置（时间、重复日期）</td><td>设备本地</td><td>创建系统提醒通知</td></tr>
+        <tr><td>血压分类标准偏好</td><td>设备本地</td><td>统一各页面的分类口径</td></tr>
+      </table>
+      <p>所有数据存储在 HarmonyOS 应用沙盒内，<strong>不会</strong>上传至任何服务器，不会同步至云端，不用于广告或营销目的。</p>
+    </section>
+
+    <section>
+      <h2>2. 应用申请的权限</h2>
+      <table class="data-table">
+        <tr><th>权限</th><th>用途</th><th>是否必须</th></tr>
+        <tr><td>PUBLISH_AGENT_REMINDER</td><td>创建本地系统提醒通知（测量血压提醒）</td><td>否，关闭后仅无法使用提醒功能</td></tr>
+      </table>
+      <p>应用<strong>不申请</strong>以下权限：位置、通讯录、相机、麦克风、读取剪贴板、网络访问、广告标识符。</p>
+    </section>
+
+    <section>
+      <h2>3. 数据导出与导入</h2>
+      <p>您可随时通过「设置 → 导入导出」将数据导出为 CSV 或 JSON 文件，保存到本地或分享给自己。导入功能支持从本地文件或手动粘贴文本恢复数据。导出文件由您完全掌控，应用不保留副本，也不上传到任何位置。</p>
+    </section>
+
+    <section>
+      <h2>4. 数据共享与第三方</h2>
+      <p>我们<strong>不会</strong>将您的任何数据出售、出租或共享给任何第三方。应用内不含任何第三方广告 SDK、分析 SDK 或追踪库。</p>
+      <p>应用仅使用以下 HarmonyOS 系统能力（受华为/系统隐私政策约束）：</p>
+      <ul>
+        <li>agent_reminder — 本地提醒通知（可选）</li>
+        <li>PersistenceV2 — 应用沙盒内的本地持久化存储</li>
+        <li>file.picker — 用于导入导出时的文件选择与保存</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. 数据安全</h2>
+      <p>所有数据存储在 HarmonyOS 应用沙盒内，其他应用无法访问。我们没有后端服务器，也不存在数据传输过程，因此不存在服务器端数据泄露风险。</p>
+    </section>
+
+    <section>
+      <h2>6. 您的数据权利</h2>
+      <ul>
+        <li><strong>导出：</strong>可通过「设置 → 导入导出」随时导出全部记录为 CSV / JSON 文件；</li>
+        <li><strong>删除：</strong>可在「设置 → 本地存储」中清空当前成员的全部记录；卸载应用将清除设备上的全部数据；</li>
+        <li><strong>更正：</strong>可在应用内随时编辑或删除任意记录。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. 儿童隐私</h2>
+      <p>本应用不面向 14 岁以下未成年人，我们不会有意收集未成年人的个人信息。</p>
+    </section>
+
+    <section>
+      <h2>8. 本政策的变更</h2>
+      <p>若本隐私政策有重大变更，我们将在应用更新说明中告知并更新本页面顶部的生效日期。继续使用应用即表示您接受更新后的政策。</p>
+    </section>
+
+    <section>
+      <h2>9. 联系我们</h2>
+      <div class="contact-block">
+        <p>如有任何隐私相关问题，请通过以下方式联系我们：</p>
+        <p style="margin-top:10px;">
+          邮箱：<a href="mailto:support@healthlog.app">support@healthlog.app</a>
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ── ENGLISH ── -->
+  <div class="en">
+    <h1>Privacy Policy</h1>
+    <p class="effective-date">Effective Date: April 10, 2026</p>
+
+    <div class="intro">
+      HealthLog respects and protects your privacy. <strong>Core principle: all your health data is stored only on your own device — the app has no servers and transmits no data to any third party.</strong>
+    </div>
+
+    <section>
+      <h2>1. Data We Collect and Store</h2>
+      <table class="data-table">
+        <tr><th>Data Type</th><th>Storage Location</th><th>Purpose</th></tr>
+        <tr><td>Blood pressure, heart rate, weight records</td><td>On-device (PersistenceV2)</td><td>Core feature: logging and trend analysis</td></tr>
+        <tr><td>Notes and status tags</td><td>On-device</td><td>Enrich records</td></tr>
+        <tr><td>Member profiles (name, height, targets)</td><td>On-device</td><td>Personalized display and health goal calculation</td></tr>
+        <tr><td>Reminder settings (time, repeat days)</td><td>On-device</td><td>Schedule system reminder notifications</td></tr>
+        <tr><td>Blood pressure standard preference</td><td>On-device</td><td>Unified classification across all views</td></tr>
+      </table>
+      <p>All data is stored within the HarmonyOS app sandbox. It is <strong>never</strong> uploaded to any server, synced to the cloud, or used for advertising or marketing.</p>
+    </section>
+
+    <section>
+      <h2>2. Permissions Requested</h2>
+      <table class="data-table">
+        <tr><th>Permission</th><th>Purpose</th><th>Required</th></tr>
+        <tr><td>PUBLISH_AGENT_REMINDER</td><td>Create local system reminder notifications for measurement reminders</td><td>No — the app works fully without it; only reminder scheduling is unavailable</td></tr>
+      </table>
+      <p>The app does <strong>not</strong> request: location, contacts, camera, microphone, clipboard read access, network access, or advertising identifiers.</p>
+    </section>
+
+    <section>
+      <h2>3. Data Export and Import</h2>
+      <p>You can export all records at any time as CSV or JSON files via Settings → Import/Export, and save or share them as you wish. Import supports restoring data from local files or pasted text. Exported files are entirely under your control — the app retains no copy and uploads nothing.</p>
+    </section>
+
+    <section>
+      <h2>4. Data Sharing &amp; Third Parties</h2>
+      <p>We do <strong>not</strong> sell, rent, or share any of your data with any third party. The app contains no third-party advertising SDKs, analytics SDKs, or tracking libraries.</p>
+      <p>The app uses only the following HarmonyOS system capabilities (each governed by Huawei/system privacy policies):</p>
+      <ul>
+        <li>agent_reminder — local reminder notifications (optional)</li>
+        <li>PersistenceV2 — local persistent storage within the app sandbox</li>
+        <li>file.picker — file selection and saving for import/export</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Data Security</h2>
+      <p>All data is stored in the HarmonyOS app sandbox, inaccessible to other apps. We operate no backend server and there is no data transmission, eliminating any server-side data breach risk.</p>
+    </section>
+
+    <section>
+      <h2>6. Your Rights</h2>
+      <ul>
+        <li><strong>Export:</strong> Export all records as CSV / JSON at any time via Settings → Import/Export;</li>
+        <li><strong>Delete:</strong> Clear all records for the current member via Settings → Local Storage; uninstalling the app removes all data from your device;</li>
+        <li><strong>Correct:</strong> Edit or delete any record inside the app at any time.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>7. Children's Privacy</h2>
+      <p>This app is not directed at children under 14, and we do not knowingly collect personal information from minors.</p>
+    </section>
+
+    <section>
+      <h2>8. Changes to This Policy</h2>
+      <p>If we make material changes to this Privacy Policy, we will note them in the app update release notes and update the effective date at the top of this page. Continued use of the app constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section>
+      <h2>9. Contact Us</h2>
+      <div class="contact-block">
+        <p>For any privacy-related questions, please contact us:</p>
+        <p style="margin-top:10px;">
+          Email: <a href="mailto:support@healthlog.app">support@healthlog.app</a>
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <span class="zh-inline">© 2026 健康手账 · 保留所有权利</span>
+    <span class="en-inline">© 2026 HealthLog · All rights reserved</span>
+  </footer>
+
+</div>
+
+<script>
+  function setLang(lang) {
+    document.body.className = 'lang-' + lang;
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+    document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  }
+  const browserLang = navigator.language || navigator.userLanguage || 'zh';
+  if (!browserLang.startsWith('zh')) setLang('en');
+</script>
+</body>
+</html>
